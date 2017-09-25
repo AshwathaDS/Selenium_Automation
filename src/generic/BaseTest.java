@@ -22,13 +22,13 @@ public abstract class BaseTest  implements IAutoConst{
 	
 	@BeforeMethod
 	public void openApplication() throws MalformedURLException{
-		//driver =new ChromeDriver();
+		driver =new ChromeDriver();
 		//To run the Script in the remote system
 		
-		URL whichsystem = new URL("http://192.168.43.107:4444/wd/hub");
-		DesiredCapabilities whichbrowser = new DesiredCapabilities();
-		whichbrowser.setBrowserName("chrome");
-		driver=new RemoteWebDriver(whichsystem, whichbrowser);
+//		URL whichsystem = new URL("http://192.168.43.107:4444/wd/hub");
+//		DesiredCapabilities whichbrowser = new DesiredCapabilities();
+//		whichbrowser.setBrowserName("chrome");
+//		driver=new RemoteWebDriver(whichsystem, whichbrowser);
 		
 		driver.manage().window().maximize();
 		String URL1=Lib.getProperty(CONFIG_PATH, "URL");
